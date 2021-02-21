@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.HomeFragment">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scrollbars="horizontal"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+
+            android:fontFamily="@font/reggae_one_regular"
+            android:text="Top three treats:"
+            android:textColor="#FFEB3B"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_recycler" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/reggae_one_regular"
+            android:textColor="#F44336"
+            android:text="Top three treats:"
+
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.172"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_recycler" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="456dp"
+            android:layout_marginTop="24dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fdish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/biriyani"
+                                    android:fontFamily="@font/reggae_one_regular"
+                                    android:textColor="#F44336"
+                                    android:textSize="20dp" />
+
+                                <ImageView
+                                    android:layout_width="90dp"
+                                    android:layout_height="80dp"
+                                    android:layout_gravity="center"
+                                    android:cropToPadding="true"
+
+                                    android:src="@drawable/biriyani" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/price"
+                                            android:textColor="@color/black" />
+
+                                        <TextView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/rs_250"
+                                            android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <RatingBar
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:rating="5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right">
+
+                                        <TextView
+                                            android:id="@id/biriyani_count"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="count" />
+
+                                        <androidx.constraintlayout.utils.widget.ImageFilterButton
+                                            android:id="@+id/biriyani_addCart"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="end"
+                                            android:backgroundTint="@color/purple_500"
+                                            android:src="@drawable/add_to_cart"
+                                            app:tint="#ffff" />
+
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sdish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/tdish"
+                    app:layout_constraintTop_toTopOf="@+id/tdish"
+                    app:layout_constraintBottom_toBottomOf="@+id/tdish">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/veg_patti"
+                                    android:fontFamily="@font/reggae_one_regular"
+                                    android:textColor="#F44336"
+                                    android:textSize="20dp" />
+
+                                <ImageView
+
+                                    android:layout_width="90dp"
+                                    android:layout_height="80dp"
+                                    android:layout_gravity="center"
+                                    android:cropToPadding="true"
+
+                                    android:src="@drawable/mexicanfood" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/price"
+                                            android:textColor="@color/black" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/rs_180"
+                                            android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <RatingBar
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:rating="4.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/vpCount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="count" />
+
+                                        <androidx.constraintlayout.utils.widget.ImageFilterButton
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:id="@+id/vegPatti_addCart"
+                                            android:layout_gravity="end"
+                                            android:backgroundTint="@color/purple_500"
+                                            android:src="@drawable/add_to_cart"
+                                            app:tint="#ffff" />
+
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                   android:id="@+id/tdish"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/fdish"
+                    app:layout_constraintTop_toTopOf="@+id/fdish"
+                    app:layout_constraintBottom_toBottomOf="@+id/fdish">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/ramen"
+                                    android:fontFamily="@font/reggae_one_regular"
+                                    android:textColor="#F44336"
+                                    android:textSize="20dp" />
+
+                                <ImageView
+                                    android:id="@+id/dish_image"
+                                    android:layout_width="90dp"
+                                    android:layout_height="80dp"
+                                    android:layout_gravity="center"
+                                    android:cropToPadding="true"
+
+                                    android:src="@drawable/birriaramen" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/price"
+                                            android:textColor="@color/black" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/rs_150"
+                                            android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <RatingBar
+
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:rating="4" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right">
+
+                                        <TextView
+                                            android:id="@+id/ramen_count"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="count" />
+
+                                        <androidx.constraintlayout.utils.widget.ImageFilterButton
+                                            android:id="@+id/ramen_addCart"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="end"
+                                            android:backgroundTint="@color/purple_500"
+                                            android:src="@drawable/add_to_cart"
+                                            app:tint="#ffff" />
+
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="580dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:icon="@drawable/cart"
+            android:text="@string/view_cart"
+            android:scaleType="center"
+            app:iconTint="#FFEB3B"
+            app:iconSize="30dp"
+
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Ui.CartFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cart"
+        android:textSize="60dp"
+        android:fontFamily="@font/font_resource"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_view_cart"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        android:fontFamily="@font/reggae_one_regular"
+        android:text="@string/net_total1"
+        android:textColor="#A3000000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/net_total_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reggae_one_regular"
+        android:layout_below="@+id/recycler_view_cart"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        android:text="@string/rs_150"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/place_order"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="38dp"
+        android:text="@string/place_order"
+        android:textColor="@color/design_default_color_error"
+        app:backgroundTint="#FFEB3B"
+        app:icon="@drawable/done"
+        app:iconTint="@color/design_default_color_error"
+        app:strokeColor="@color/white" />
+
+
+</RelativeLayout>
